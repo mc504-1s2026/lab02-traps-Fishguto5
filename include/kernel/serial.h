@@ -12,7 +12,7 @@
  * then look for the node "serial@10000000", which has an "interrupts" property
  */
 #define IRQ_SERIAL	0xaUL
-
+#define SERIAL_BUF_SIZE 128
 #define SERIAL_BASE	((void*)0x10000000)
 
 /* https://courses.grainger.illinois.edu/ece391/su2025/docs/NS16550A.pdf */
@@ -88,6 +88,8 @@
 #define SERIAL_MSR	0x6UL
 /* Scratch Register */
 #define SERIAL_SCR	0x7UL
+// Serial IRQ
+#define SERIAL_IRQ 0x0a
 
 /*
  * serial_init(): initialize the serial port driver
